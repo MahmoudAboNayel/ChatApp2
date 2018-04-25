@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.abo_nayel.chatapp.AcountSettingsActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/acc_image"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_account_circle" />
+
+    <!-- Image Cropper fill the remaining available height -->
+    <com.theartofdev.edmodo.cropper.CropImageView
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/acc_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acc_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="Display Name"
+        android:textColor="#fff"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/acc_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/acc_image"
+        android:layout_below="@+id/acc_name"
+        android:layout_marginTop="13dp"
+        android:text="Hi there, I'm using ChatApp"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/acc_image_btn"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/acc_status_btn"
+        android:layout_centerHorizontal="true"
+        android:text="Change Image"
+        android:textColor="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/acc_status_btn"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/acc_image_btn"
+        android:layout_marginBottom="42dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Change Status"
+        android:textColor="#fff" />
+</RelativeLayout>
